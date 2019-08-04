@@ -1,4 +1,4 @@
-package go08
+package closure
 
 import "fmt"
 

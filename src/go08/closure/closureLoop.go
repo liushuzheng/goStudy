@@ -1,8 +1,8 @@
-package go08
+package closure
 
 import "fmt"
 
-//ClosuLoop 循环闭包
+//ClosureLoop 循环闭包
 func ClosureLoop() {
 	var fs []func() int
 	for i := 0; i < 3; i++ {
