@@ -17,7 +17,7 @@ func getSumDivisible(num int, divider int, resultChan chan int) {
 	resultChan <- sum
 }
 
-func main() {
+func main1() {
 	runtime.GOMAXPROCS(runtime.NumCPU())
 	LIMIT := 1000
 	//用于被15除结果
@@ -28,10 +28,10 @@ func main() {
 	go getSumDivisible(LIMIT, 15, job1)
 	go getSumDivisible(LIMIT, 3, job2)
 	go getSumDivisible(LIMIT, 5, job2)
-	sum15 := <-job1
-	sum3, sum5 := <-job2, <-job2
+	// sum15 :=
+	sum15, sum3, sum5 := <-job1, <-job2, <-job2
 	sum := sum3 + sum5 - sum15
-	end :=time.Now()
+	end := time.Now()
 	fmt.Println(sum)
 	fmt.Println(end.Sub(start))
 
