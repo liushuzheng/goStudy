@@ -1,4 +1,4 @@
-package main
+package go08
 
 import "fmt"
 
@@ -12,7 +12,8 @@ func intSeq() func() int {
 	}
 }
 
-func closure() {
+// Closure 简单闭包
+func Closure() {
 	nextInt := intSeq()
 	fmt.Println(nextInt())
 	fmt.Println(nextInt())

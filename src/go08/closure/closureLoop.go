@@ -1,12 +1,13 @@
-package main
+package go08
 
 import "fmt"
 
-func closuLoop() {
+//ClosuLoop 循环闭包
+func ClosureLoop() {
 	var fs []func() int
 	for i := 0; i < 3; i++ {
 		fs = append(fs, func() int {
-			fmt.Println("i is ", i)
+			// fmt.Println("i is ", i)
 			return i
 		})
 	}
