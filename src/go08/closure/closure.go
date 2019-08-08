@@ -18,5 +18,7 @@ func Closure() {
 	fmt.Println(nextInt())
 	fmt.Println(nextInt())
 	fmt.Println(nextInt())
+	var a = int(100)
+	fmt.Println(a)
 
 }

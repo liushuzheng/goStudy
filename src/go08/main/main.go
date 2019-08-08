@@ -6,5 +6,6 @@ import (
 
 func main() {
 	closure.ClosureLoop()
+	closure.Closure()
 
 }
