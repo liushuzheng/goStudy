@@ -8,7 +8,7 @@ import (
 func main() {
 	//未使用key 警告
 	// var rect = structandinterface.Rect{5, 6}
-	var rect = structandinterface.Rect
+	var rect structandinterface.Rect
 	rect.Width = 10.2
 	rect.Length = 2
 	fmt.Println((&rect).Area())
