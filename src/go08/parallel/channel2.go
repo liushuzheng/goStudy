@@ -20,7 +20,7 @@ func threePointShooting2(msgChannel chan string) {
 	}
 }
 
-func main() {
+func mains() {
 
 	cFixed := make(chan string)
 	c3Point := make(chan string)
