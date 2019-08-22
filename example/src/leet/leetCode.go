@@ -3,9 +3,13 @@ package main
 import "fmt"
 
 func main() {
+	var p = person{"小明", 20}
+	p.run(12)
+	person.run(p, 10)
 	s := "abba1abba"
 	longs := longestPalindrome(s)
 	fmt.Println(longs)
+
 }
 
 func longestPalindrome(s string) string {
@@ -29,4 +33,13 @@ func longestPalindrome(s string) string {
 
 	return longest
 
+}
+
+type person struct {
+	name string
+	age  int
+}
+
+func (p person) run(speed int) {
+	fmt.Println(p.name, "年龄是", p.age, "运动速度是", speed)
 }
