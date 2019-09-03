@@ -3,6 +3,10 @@ package main
 import "fmt"
 
 func main() {
+	loopChannel()
+}
+
+func closeChannel() {
 
 	jobs := make(chan int, 5)
 	done := make(chan bool)
@@ -33,4 +37,19 @@ func main() {
 	// 我们知道done通道在接收数据的时候会阻塞 所以在所有的数据发送接收完成后
 	// 写入done的数据将在这里被接收 然后程序结束
 	<-done
+}
+
+func loopChannel() {
+	queue := make(chan string, 2)
+	queue <- "one"
+	queue <- "two"
+	close(queue)
+	//range 函数遍历每个从通道接收到的数据
+	// 因为queue 在发送完两个数据之后就关闭了通道 所以这里我们range函数在接收到两个数据之后就结束了
+	// 如果上面的queue 通道不关闭 那么range函数就不会结束 从而在接收第三个数据的时候就阻塞了
+	for elem := range queue {
+
+		fmt.Println(elem)
+	}
+
 }
