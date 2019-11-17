@@ -42,4 +42,17 @@ func main() {
 		fmt.Println("request", req, time.Now())
 	}
 
+	// myChan := make(chan int, 5)
+	// myChan <- 10
+	// close(myChan)
+	// <-myChan
+	// _, ok := <-myChan
+	// if !ok {
+	// 	fmt.Println("获取了数据")
+	// }
+	// _, oks := <-myChan
+	// if !oks {
+	// 	fmt.Println("获取了数据")
+	// }
+
 }
