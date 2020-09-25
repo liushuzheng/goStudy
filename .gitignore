@@ -13,4 +13,5 @@
 /vscode
 /pkg
 /src/code
-.idea/
+.idea/*
+
